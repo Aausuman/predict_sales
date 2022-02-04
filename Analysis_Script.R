@@ -1,3 +1,4 @@
+# Reading in the data sets
 sales_data = read.csv('~/Documents/Gits/predict_sales/data/sales_train.csv',header = TRUE)
 shops_data = read.csv('~/Documents/Gits/predict_sales/data/shops.csv', header = TRUE)
 items_data = read.csv('~/Documents/Gits/predict_sales/data/items.csv', header = TRUE)
