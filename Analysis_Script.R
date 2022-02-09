@@ -29,8 +29,14 @@ library(foreach)
 
 refined_sales_data = foreach(i = 0:max(shops_data$shop_id)) %do% {
   current_shop_subset = subset(sales_data, sales_data$shop_id == i)
-  
+  current_shop_shrunk = shrinking_by_month(current_shop_subset)
 }
 
-
+shrinking_by_month = function(a){
+  list_items = unique(a$item_id)
+  foreach(i=list_items){
+    current_item_subset = subset(a, a$item_id == i)
+    
+  }
+}
 
