@@ -17,3 +17,20 @@ sales_count_by_shop = table(sales_data$shop_id)
 # Now since we have to predict sales of shops and its items month wise
 # Let's do some grouping into the sales data
 # I'll group sales by shop and then by item.
+install.packages("dplyr")
+library(dplyr)
+
+grouped_by_shop = sales_data %>% group_by(shop_id)
+
+# basically we want to aggregate the sales of each item in each month for each shop
+# and create a new data-set for this
+install.packages("foreach")
+library(foreach)
+
+refined_sales_data = foreach(i = 0:max(shops_data$shop_id)) %do% {
+  current_shop_subset = subset(sales_data, sales_data$shop_id == i)
+  
+}
+
+
+
